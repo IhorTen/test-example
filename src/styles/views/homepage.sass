@@ -1,0 +1,19 @@
+@import 'styles/vars'
+
+main.v-main-page
+    text-align: center
+    .container
+        max-width: 1200px
+        margin: 0 auto
+        div.logo
+            height: 100px
+            +mobile
+                display: none
+
+    .loading
+        text-align: center
+        padding-top: 200px
+        font-size: 30px
+        color: $colorMain
+        font-weight: 500
+        font-family: $fonts

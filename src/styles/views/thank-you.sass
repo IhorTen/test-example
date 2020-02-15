@@ -1,0 +1,33 @@
+@import "styles/vars"
+
+main.v-thankyou
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    div.thank-block
+        margin: 0 auto
+        max-width: 800px
+        padding: 30px 50px
+        border-radius: 7px
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35)
+        +mobile
+            margin: 0 15px
+            padding: 30px 40px
+
+    h1.thank-title
+        text-align: center
+        font-size: 35px
+        margin-bottom: 10px
+    
+    div.thank-logo
+        margin: 0px auto 50px auto
+        max-width: 200px
+        img 
+            width: 100%
+
+    p.thank-descr
+        font-size: 18px
+        text-align: center

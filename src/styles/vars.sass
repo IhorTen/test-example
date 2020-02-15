@@ -1,0 +1,34 @@
+// Here you can find and write all global variables and mixins
+//
+// To use these, write `@import "styles/vars"` at the start of your sass file
+
+$colorMain: #1A237E
+$colorAccent: #FFAB00
+$colorPositive: #6ab04c
+$colorNegative: #d91e18
+
+$colorMain: #0f5897
+$textBtn: #fff
+$progress: #48A7F2
+$skipBtn : #00000073
+
+/* FONTS */
+$fonts: "Liberation Sans"
+$fontForm: "Open Sans", sans-serif
+$fontMain: "Open Sans", sans-serif
+
+/* MIXINS */
+
+=max($size)
+	@media (max-width: $size)
+		@content
+
+=tabletA
+    +max(1024px)
+        @content
+
+=mobile
+	+max(768px)
+		@content
+    
+

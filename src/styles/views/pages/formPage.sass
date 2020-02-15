@@ -1,0 +1,146 @@
+@import 'styles/vars'
+
+h3
+    font-size: 32px
+    line-height: 44px
+    margin-bottom: 10px
+    +mobile
+        margin-top: 5px
+        margin-bottom: 5px
+
+.main-form-container
+    max-width: 66%
+    border: 1px solid rgb(227, 227, 227)
+    background: rgb(245, 245, 245)
+    text-align: start
+    margin: 0 auto
+    box-sizing: border-box
+    padding: 20px 20px 35px 20px
+    +tabletA
+        max-width: 85%
+    +mobile
+        max-width: 95%
+    h2.form-h2
+        margin-bottom: 20px
+        font-family: $fontForm
+        font-size: 28px
+        font-weight: 400
+    p.form-p
+        margin-bottom: 20px
+        font-size: 14px
+        font-family: $fontForm
+
+    input.input-source
+        position: absolute
+        opacity: 0
+        width: 0
+        height: 0
+
+    div.progress-loading
+        text-align: center
+        margin-top: -17px
+        .percent-number
+            font-size: 13px
+            font-family: $fontForm
+            font-style: italic
+        .loading-percentage
+            height: 2px
+            width: 100%
+            position: relative
+            overflow: hidden
+            .percentage
+                position: absolute
+                height: 100%
+                transition: 0.6s
+                background:  linear-gradient(to right, rgba(237,86,78,0.74) 0%,rgba(101,183,97,0.91) 67%,#62db5c 100%)
+
+    div.position-name-wrap
+        position: relative
+        p.position-name
+            font-size: 21px
+            font-weight: 600
+            color: #000
+        input
+            position: absolute
+            top: 0
+            left: 0
+            background: #fff
+            pointer-events: none
+            z-index: -1
+            opacity: 0
+    
+.form-inp-bottom
+    margin-left: 20px
+
+    .f-check-wrap
+        position: relative
+        input.check-inp
+            width: auto
+            position: absolute
+            left: 0
+            top: 0
+            opacity: 0
+            &:checked + label
+                .f-checkbox
+                    &:before
+                        opacity: 1
+        label.f-bottom-left
+            font-size: 14px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            position: relative
+            div.f-checkbox
+                width: 12px
+                height: 12px
+                border-radius: 2px
+                border: 1px solid black
+                position: relative
+                margin-right: 10px
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    width: 10px
+                    height: 10px
+                    background: #1066f2
+                    border-radius: 2px
+                    opacity: 0
+                    transition: 0.2s
+            a
+                font-weight: 600
+                color: #1066f2
+                font-family: $fontForm
+            span
+                font-family: $fontForm
+
+    .center
+        text-align: center
+        position: relative
+        button
+            margin: 10px auto 0
+            background-color: #197c1d
+            font-family: $fontForm
+            color: #ffffff
+            height: 40px
+            padding: 0 20px
+            width: auto
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 600
+            border-radius: 5px
+            &:hover
+                cursor: pointer
+                background-color: #4caf50
+        p.invalid
+            position: absolute
+            left: 0
+            right: 0
+            color: $colorNegative
+            margin-top: 5px
+            font-size: 15px
+            font-weight: 500
+            +tabletA
+                margin-bottom: 5px

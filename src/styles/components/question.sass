@@ -1,0 +1,67 @@
+@import "styles/vars"
+
+div.question
+
+    div.quest-title
+        font-size: 20px
+        margin-bottom: 20px
+        p
+            font-size: 19px
+        img
+            margin-top: 10px
+            max-width: 500px
+            +mobile
+                display: block
+                margin: 0 auto
+                max-width: 280px
+        .invalid
+            padding: 10px 2px
+            background-color: #fdebed
+            text-align: center
+            font-size: 15px
+            margin: 10px 0
+
+    div.answer-wrap
+        position: relative
+        &:hover
+            background: #eeeeee83
+
+    input.radio-btn
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        &:checked + label .custom-check
+            &:before
+                opacity: 1
+        
+    label.answer-text
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 5px 0
+        img
+            max-width: 110px
+            +mobile
+                max-width: 75px
+
+    div.custom-check  
+        content: ""
+        position: relative
+        border-radius: 50%
+        width: 14px
+        height: 14px
+        border: 1px solid gray
+        margin-right: 5px
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            width: 7px
+            height: 7px
+            background: gray
+            border-radius: 50%
+            opacity: 0
+            transition: 0.2s

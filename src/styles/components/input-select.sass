@@ -1,0 +1,40 @@
+@import 'styles/vars'
+
+.f-input-select
+    margin-bottom: 20px
+    font-size: 14px
+    font-weight: 600
+    position: relative
+    &.valid
+        select
+            border-color: $colorPositive
+    &.invalid
+        select
+            border-color: $colorNegative
+
+    label
+        font-family: "Open Sans", sans-serif
+        margin-left: 10px
+
+    select
+        font-family: "Open Sans", sans-serif
+        margin-top: 10px
+        font-size: 16px
+        background: #fff
+        width: 100%
+        line-height: 20px
+        border-radius: 5px
+        border: 1px solid #bdbdbd
+        padding: 10px
+
+    p.invalid
+        position: absolute
+        font-size: 12px
+        padding: 0 20px
+        bottom: -15px
+        left: -10px
+        color: $colorNegative
+        font-family: $fontForm
+        font-weight: 400
+        margin-bottom: 0
+        

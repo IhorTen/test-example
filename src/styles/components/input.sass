@@ -1,0 +1,70 @@
+@import 'styles/vars'
+
+.f-input
+    &:last-child
+        background: none
+        border: none
+        position: relative
+    &.filled
+        div.f-input-wrap
+            input, select
+                border-color: $colorPositive
+        span.f-upload-btn
+            border-color: $colorPositive
+            &::before
+                content: "\2713"
+                color: $colorPositive
+                position: absolute
+                right: -35px
+                top: -6px
+                font-size: 35px
+    &.invalid
+        div.f-input-wrap
+            input, select
+                border-color: $colorNegative
+        span.f-upload-btn
+            border-color: $colorNegative
+            &::before
+                content: "\2717"
+                color: $colorNegative
+                position: absolute
+                right: -35px
+                top: -4px
+                font-size: 33px
+    label
+        display: inline-block
+        font-family: $fontForm
+        font-size: 14px
+        font-weight: 600
+        margin-bottom: 5px
+        margin-left: 10px
+    .f-input-wrap
+        margin-bottom: 25px
+        input
+            font-family: $fontForm
+            width: 100%
+            display: block
+            border: 1px solid #bdbdbd
+            border-radius: 5px
+            padding: 10px
+            line-height: 20px
+            font-weight: inherit
+            font-size: 16px
+            background: #fff
+        input.file
+            background: none
+            border: none
+            width: 50%
+            padding: 5px
+
+    p.invalid
+        position: absolute
+        font-size: 12px
+        padding: 0 20px
+        bottom: -15px
+        left: -10px
+        color: $colorNegative
+        font-family: $fontForm
+        margin-bottom: 0
+        
+            
